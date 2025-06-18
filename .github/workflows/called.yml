@@ -1,6 +1,7 @@
 name: PAT-Reusable-Workflow
 
 on:
+  push:  
   workflow_call: 
 
 jobs:
