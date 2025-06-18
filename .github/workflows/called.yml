@@ -3,7 +3,9 @@ name: PAT-Reusable-Workflow
 on:
   push:  
   workflow_call:
-    secrets: inherit
+    secrets:
+      MYPAT:
+        required: true
 
 jobs:
     print-secret:
