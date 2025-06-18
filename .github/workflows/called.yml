@@ -1,0 +1,11 @@
+name: PAT-Reusable-Workflow
+
+on:
+  workflow_call:
+
+jobs:
+    print-secret:
+        runs-on: self-hosted
+        steps:
+            - name: step1
+              run: echo "token=${{secrets.mypat}}"
