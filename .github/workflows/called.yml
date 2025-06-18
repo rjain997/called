@@ -1,7 +1,6 @@
 name: PAT-Reusable-Workflow
 
 on:
-  push:
   workflow_call: 
 
 jobs:
@@ -9,9 +8,4 @@ jobs:
         runs-on: self-hosted
         steps:
             - name: step1
-              run: |
-                if [ -z "${{ secrets.MYPAT }}" ]; then
-                    echo "Secret is empty or not passed correctly"
-                else
-                    echo "Secret is set"
-                fi
+              run: echo ${{ secrets.MYPAT }}
