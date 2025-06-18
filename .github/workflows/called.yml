@@ -10,7 +10,6 @@ jobs:
         steps:
             - name: step1
               run: |
-              run: |
                 if [ -z "${{ secrets.MYPAT }}" ]; then
                     echo "Secret is empty or not passed correctly"
                 else
