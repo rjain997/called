@@ -1,6 +1,7 @@
 name: PAT-Reusable-Workflow
 
 on:
+  push:
   workflow_call: 
 
 jobs:
@@ -8,4 +9,4 @@ jobs:
         runs-on: self-hosted
         steps:
             - name: step1
-              run: echo "token=${{secrets.MYPAT}}"
+              run: echo "Token length: ${#secrets.MYPAT}"
