@@ -1,11 +1,7 @@
 name: PAT-Reusable-Workflow
 
 on:
-  #push:  
   workflow_call:
-    #secrets:
-      #MYPAT:
-        #required: true
 
 jobs:
     print-secret:
